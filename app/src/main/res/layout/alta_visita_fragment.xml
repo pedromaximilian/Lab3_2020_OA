@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.visita.AltaVisitaFragment" >
+
+    <TextView
+        android:id="@+id/tvAltaNombrePaciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre Paciente"
+        android:fontFamily="@font/bold"
+
+        android:textColor="@color/grey"
+        android:textSize="19sp"/>
+
+    <EditText
+        android:id="@+id/taNotaEmpleado"
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+        android:backgroundTint="@color/grey"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp">
+
+        <Button
+            android:id="@+id/btnFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="Foto" />
+
+        <Button
+            android:id="@+id/btnIrAFirma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Firmar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/btnGuardarVisita"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Guardar" />
+    </LinearLayout>
+</LinearLayout>

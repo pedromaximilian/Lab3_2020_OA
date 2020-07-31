@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.lab3_2020_oa.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+        <action
+            android:id="@+id/action_nav_home_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.lab3_2020_oa.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/altaVisitaFragment"
+        android:name="com.example.lab3_2020_oa.ui.visita.AltaVisitaFragment"
+        android:label="alta_visita_fragment"
+        tools:layout="@layout/alta_visita_fragment" >
+        <action
+            android:id="@+id/action_altaVisitaFragment_to_foto_fragment"
+            app:destination="@id/foto_fragment" />
+        <action
+            android:id="@+id/action_altaVisitaFragment_to_firma"
+            app:destination="@id/firma" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.example.lab3_2020_oa.ui.visita.DetalleFragment"
+        android:label="detalle_fragment"
+        tools:layout="@layout/detalle_fragment" >
+        <action
+            android:id="@+id/action_detalleFragment_to_altaVisitaFragment"
+            app:destination="@id/altaVisitaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foto_fragment"
+        android:name="com.example.lab3_2020_oa.ui.visita.Foto"
+        android:label="foto_fragment"
+        tools:layout="@layout/foto_fragment" />
+    <fragment
+        android:id="@+id/firma"
+        android:name="com.example.lab3_2020_oa.ui.visita.firma"
+        android:label="firma" />
+
+</navigation>
